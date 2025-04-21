@@ -1,1 +1,317 @@
-hallo wie gehts es euch 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KS Reisen – Ihre Reiseagentur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a3d62;
+      --accent: #2980b9;
+      --light: #ecf0f1;
+      --dark: #1e272e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      z-index: 1000;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      height: 90vh;
+      background: url('/api/placeholder/1200/800') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 16px;
+      max-width: 800px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: 2000%;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .slideshow-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 1rem;
+    }
+
+    .slideshow-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .slideshow-buttons button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .destination-card {
+      background-color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .destination-card h3 {
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin: 0.75rem 1rem 0.25rem;
+    }
+
+    .destination-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 0 1rem 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>KS Reisen</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Startseite</a></li>
+      <li><a href="#experience">Erfahrung</a></li>
+      <li><a href="#top-destinations">Top Reiseziele</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Entdecken Sie die Welt mit KS Reisen</h2>
+    <p>Personalisierte Reiseerlebnisse seit 30 Jahren – von mir für Sie.</p>
+  </div>
+</section>
+
+<div class="container">
+  <section id="experience">
+    <h2 class="section-title">30 Jahre Reiseerfahrung</h2>
+    <div class="slideshow">
+      <div class="slides" id="slides">
+        <!-- Slides hier bleiben unverändert -->
+        <div class="slide"><img src="/images/exp1.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="/images/exp2.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="/images/exp3.jpg" alt="Slide 3"></div>
+        <div class="slide"><img src="/images/exp4.jpg" alt="Slide 4"></div>
+        <div class="slide"><img src="/images/exp5.jpg" alt="Slide 5"></div>
+        <div class="slide"><img src="/images/exp6.jpg" alt="Slide 6"></div>
+        <div class="slide"><img src="/images/exp7.jpg" alt="Slide 7"></div>
+        <div class="slide"><img src="/images/exp8.jpg" alt="Slide 8"></div>
+        <div class="slide"><img src="/images/exp9.jpg" alt="Slide 9"></div>
+        <div class="slide"><img src="/images/exp10.jpg" alt="Slide 10"></div>
+        <div class="slide"><img src="/images/exp11.jpg" alt="Slide 11"></div>
+        <div class="slide"><img src="/images/exp12.jpg" alt="Slide 12"></div>
+        <div class="slide"><img src="/images/exp13.jpg" alt="Slide 13"></div>
+        <div class="slide"><img src="/images/exp14.jpg" alt="Slide 14"></div>
+        <div class="slide"><img src="/images/exp15.jpg" alt="Slide 15"></div>
+        <div class="slide"><img src="/images/exp16.jpg" alt="Slide 16"></div>
+        <div class="slide"><img src="/images/exp17.jpg" alt="Slide 17"></div>
+        <div class="slide"><img src="/images/exp18.jpg" alt="Slide 18"></div>
+        <div class="slide"><img src="/images/exp19.jpg" alt="Slide 19"></div>
+        <div class="slide"><img src="/images/exp19.jpg" alt="Slide 20"></div>
+      </div>
+      <div class="slideshow-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="top-destinations">
+    <h2 class="section-title">Top Reiseziele</h2>
+    <div class="destinations">
+      <div class="destination-card">
+        <img src="/images/spain.jpg" alt="Spanien">
+        <h3>Spanien</h3>
+        <p>Sonne, Strand und Lebensfreude pur. Erkunden Sie historische Städte und traumhafte Küsten.</p>
+      </div>
+      <div class="destination-card">
+        <img src="/images/bali.jpg" alt="Bali">
+        <h3>Bali</h3>
+        <p>Ein Paradies aus Tempeln, Reisterrassen und Stränden. Ideal zum Entspannen und Entdecken.</p>
+      </div>
+      <div class="destination-card">
+        <img src="/images/brazil.jpg" alt="Brasilien">
+        <h3>Brasilien</h3>
+        <p>Lebensfreude, Naturwunder und Samba. Vom Amazonas bis zur Copacabana – ein Abenteuer.</p>
+      </div>
+      <div class="destination-card">
+        <img src="/images/thailand.jpg" alt="Thailand">
+        <h3>Thailand</h3>
+        <p>Kristallklare Strände, exotische Küche und faszinierende Kultur. Perfekt für Entdecker.</p>
+      </div>
+      <div class="destination-card">
+        <img src="/images/kenya.jpg" alt="Kenia">
+        <h3>Kenia</h3>
+        <p>Unvergessliche Safaris, wilde Natur und kulturelle Vielfalt. Afrika in seiner schönsten Form.</p>
+      </div>
+      <div class="destination-card">
+        <img src="/images/zanzibar.jpg" alt="Sansibar">
+        <h3>Sansibar</h3>
+        <p>Gewürzinsel mit Traumstränden und orientalischem Flair. Ein echtes Tropenjuwel.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Kontakt</h2>
+    <p style="text-align:center;">Ich freue mich auf Ihre Anfrage – lassen Sie uns Ihre nächste Reise gemeinsam planen.</p>
+    <div style="text-align: center; margin-top: 1rem;">
+      <p>📞 Telefon: <strong>+49 1515 0980157</strong></p>
+      <p>✉️ E-Mail: <strong>info@ksreisen.de</strong></p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 KS Reisen. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.getElementById('slides');
+  const totalSlides = slides.children.length;
+
+  function updateSlidePosition() {
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlidePosition();
+  }
+
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  }
+</script>
+
+</body>
+</html>
